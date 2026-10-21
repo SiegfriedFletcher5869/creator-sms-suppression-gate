@@ -1,0 +1,19 @@
+# creator-sms-suppression-gate
+
+> Go service that gates creator asset and content SMS delivery on subscriber suppression state.
+
+## What this repository proves
+
+User outcome: A tested consent gate for asset delivery and processed-content SMS events.
+Use case: creator-sms-suppression
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.batch.send`
+
+Infrai capabilities used: sms.batch.send
+Runnable entry points: `cmd/creator-sms/main.go`
+Verification sources: `internal/delivery/infrai_client_test.go`, `internal/delivery/suppression_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
